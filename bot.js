@@ -29,49 +29,39 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
 });
 
 
-client.on('message', message => { 
-    var p = "."
-        if (message.content.startsWith(p + `ZERO`)) {
-message.guild.setName(`Z`)
-.then(msg => {
- setInterval(() => {
-message.guild.setName(`ZE`)
-.then(msg => {
- setInterval(() => {
-message.guild.setName(`ZER`) 
-.then(msg => {
- setInterval(() => {
-message.guild.setName(`ZERO`)
-.then(msg => {
- setInterval(() => {
-message.guild.setName(`ZERO`)
-.then(msg => {
- setInterval(() => {
-message.guild.setName(`MCAR`)
-.then(msg => {
- setInterval(() => {
-}, 11000);
-});
-},  10000);
-});
-},  8000);
-});
-},  6000);
-});
-},  4000);
-});
-},  1000);
-})
-        .catch(console.error);
-  //message.delete().catch(O_o=>{}); 
- 
-}
-
-});
 
 
-
-
+client.on('message', message => {
+    if (message.content.startsWith(".تهكير")) {
+      if (message.author.bot) return
+           message.delete();
+             let args = message.content.split(' ').slice(1);
+                   let virusname = args.join(' ');
+                 if (virusname < 1) {
+                     return message.channel.send("``اكتب اسم الشخص الي تبي يتهكر``");
+                                     }
+                 message.channel.send({embed: new Discord.RichEmbed().setTitle('Loading ' + virusname + "...").setColor(0xFF0000)}).then(function(m) {
+             setTimeout(function() {
+               m.edit({embed: new Discord.RichEmbed().setTitle('[' + virusname + ']: Loading Discord Virus [▓ ] 1%').setColor(0xFF0000)})
+             }, 1000)
+            setTimeout(function() {
+               m.edit({embed: new Discord.RichEmbed().setTitle('[' + virusname + ']: Loading Discord Virus [▓▓▓▓] 25%').setColor(0xFF0000)})
+             }, 2000)
+           setTimeout(function() {     
+               m.edit({embed: new Discord.RichEmbed().setTitle('[' + virusname + ']: Loading Discord Virus [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ] 100%').setColor(0xFF0000)})
+             }, 3000)
+                setTimeout(function() {
+               m.edit({embed: new Discord.RichEmbed().setTitle('[' + virusname + ']: Uploaded! Initiating explosion in 1...').setColor(0xFF0000)})
+             }, 4000)
+              setTimeout(function() {
+               m.delete()
+           }, 5000)
+             setTimeout(function() {
+               message.channel.send('تم تهكيرك')
+           }, 6000)
+           });
+         }
+ });
 
 
 
