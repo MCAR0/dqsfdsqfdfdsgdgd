@@ -32,22 +32,22 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
 client.on('message', message => { 
     var p = "."
         if (message.content.startsWith(p + `ZERO`)) {
-message.guild.setName(`.Z`)
+message.guild.setName(`Z`)
 .then(msg => {
  setInterval(() => {
-message.guild.setName(`.ZE`)
+message.guild.setName(`ZE`)
 .then(msg => {
  setInterval(() => {
-message.guild.setName(`.ZER`) 
+message.guild.setName(`ZER`) 
 .then(msg => {
  setInterval(() => {
-message.guild.setName(`.ZERO`)
+message.guild.setName(`ZERO`)
 .then(msg => {
  setInterval(() => {
-message.guild.setName(`.ZERO0`)
+message.guild.setName(`ZERO`)
 .then(msg => {
  setInterval(() => {
-message.guild.setName(`.ZERO0 `)
+message.guild.setName(`MCAR`)
 .then(msg => {
  setInterval(() => {
 }, 11000);
