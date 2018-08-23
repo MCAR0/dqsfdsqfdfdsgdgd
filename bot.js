@@ -28,4 +28,56 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
   console.log('')
 });
 
+
+client.on('message', message => { 
+    var p = "."
+        if (message.content.startsWith(p + `ZERO`)) {
+message.guild.setName(`.Z`)
+.then(msg => {
+ setInterval(() => {
+message.guild.setName(`.ZE`)
+.then(msg => {
+ setInterval(() => {
+message.guild.setName(`.ZER`) 
+.then(msg => {
+ setInterval(() => {
+message.guild.setName(`.ZERO`)
+.then(msg => {
+ setInterval(() => {
+message.guild.setName(`.ZERO0`)
+.then(msg => {
+ setInterval(() => {
+message.guild.setName(`.ZERO0 `)
+.then(msg => {
+ setInterval(() => {
+}, 11000);
+});
+},  10000);
+});
+},  8000);
+});
+},  6000);
+});
+},  4000);
+});
+},  1000);
+})
+        .catch(console.error);
+  //message.delete().catch(O_o=>{}); 
+ 
+}
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
